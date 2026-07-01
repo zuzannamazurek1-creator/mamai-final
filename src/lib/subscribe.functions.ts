@@ -19,7 +19,7 @@ export type SubscribeResult =
   | { ok: false; code: "duplicate" | "invalid" | "network"; message: string };
 
 export const subscribe = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => subscribeSchema.parse(data))
+  .validator((data: unknown) => subscribeSchema.parse(data))
   .handler(async ({ data }): Promise<SubscribeResult> => {
     const { supabaseAdmin } = await import(
       "@/integrations/supabase/client.server"
