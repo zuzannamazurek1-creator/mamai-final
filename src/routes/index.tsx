@@ -631,9 +631,8 @@ function Footer() {
   return (
     <footer className="border-t-2 border-brand-black bg-brand-cream">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <div className="flex items-center gap-2 font-black">
-          <span className="inline-block h-3 w-3 rounded-full bg-brand-orange" />
-          mamyai.pl
+        <div className="flex items-center">
+          <img src={logo.url} alt="mamyai.pl" className="h-7 w-auto" />
         </div>
         <p className="text-brand-black/70">
           © {new Date().getFullYear()} mamyai.pl · Zuzanna Mazurek
