@@ -638,6 +638,27 @@ function Footer() {
           © {new Date().getFullYear()} mamyai.pl · Zuzanna Mazurek
         </p>
       </div>
+      <div className="mx-auto max-w-7xl px-5 pb-6 text-xs text-brand-black/60 sm:px-8">
+        Photo by{" "}
+        <a
+          href="https://unsplash.com/@ergonofis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          className="underline underline-offset-2 hover:text-brand-black"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ergonofis
+        </a>{" "}
+        on{" "}
+        <a
+          href="https://unsplash.com/photos/a-woman-sitting-at-a-table-with-a-child-using-a-laptop-Yt-xvKkXtCc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          className="underline underline-offset-2 hover:text-brand-black"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </div>
     </footer>
+
   );
 }
