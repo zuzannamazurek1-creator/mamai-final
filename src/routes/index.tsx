@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
+import heroImage from "@/assets/hero-mama.avif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,42 +79,56 @@ function Nav() {
 function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-5 pt-8 pb-20 sm:px-8 sm:pt-16 sm:pb-28">
-      <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-brand-black bg-brand-lilac px-4 py-1.5 text-xs font-bold uppercase tracking-wider sm:text-sm">
-        <span className="inline-block h-2 w-2 rounded-full bg-brand-orange" />
-        Mamy, które budują
-      </div>
+      <div className="grid gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center md:gap-16">
+        <div>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-brand-black bg-brand-lilac px-4 py-1.5 text-xs font-bold uppercase tracking-wider sm:text-sm">
+            <span className="inline-block h-2 w-2 rounded-full bg-brand-orange" />
+            Mamy, które budują
+          </div>
 
-      <h1 className="max-w-4xl text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-        Bo{" "}
-        <span className="relative inline-block">
-          <span className="relative z-10">„kiedyś"</span>
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 bottom-1 -z-0 h-3 bg-brand-orange sm:bottom-2 sm:h-4 md:h-5"
+          <h1 className="max-w-4xl text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+            Bo{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">„kiedyś"</span>
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-1 -z-0 h-3 bg-brand-orange sm:bottom-2 sm:h-4 md:h-5"
+              />
+            </span>{" "}
+            nigdzie nie&nbsp;nadejdzie.
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-lg font-normal leading-relaxed text-brand-black/80 sm:text-xl">
+            Twój pomysł nie może czekać aż dzieci dorosną. Dołącz do
+            mam-builderek, które nie czekają na „odpowiedni moment".
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#dolacz"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-7 py-4 text-base font-bold text-brand-cream transition-transform hover:scale-[1.03]"
+            >
+              Dołącz do społeczności
+              <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="#misja"
+              className="text-base font-bold underline decoration-brand-orange decoration-2 underline-offset-4"
+            >
+              Poznaj misję
+            </a>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="absolute -inset-3 -z-10 rounded-3xl bg-brand-lavender sm:-inset-4" />
+          <img
+            src={heroImage.url}
+            alt="Mama pracująca na laptopie z dzieckiem przy stole"
+            className="aspect-[4/5] w-full rounded-3xl border-2 border-brand-black object-cover"
+            loading="eager"
           />
-        </span>{" "}
-        nigdzie nie&nbsp;nadejdzie.
-      </h1>
-
-      <p className="mt-8 max-w-2xl text-lg font-normal leading-relaxed text-brand-black/80 sm:text-xl">
-        Twój pomysł nie może czekać aż dzieci dorosną. Dołącz do
-        mam-builderek, które nie czekają na „odpowiedni moment".
-      </p>
-
-      <div className="mt-10 flex flex-wrap items-center gap-4">
-        <a
-          href="#dolacz"
-          className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-7 py-4 text-base font-bold text-brand-cream transition-transform hover:scale-[1.03]"
-        >
-          Dołącz do społeczności
-          <span aria-hidden="true">→</span>
-        </a>
-        <a
-          href="#misja"
-          className="text-base font-bold underline decoration-brand-orange decoration-2 underline-offset-4"
-        >
-          Poznaj misję
-        </a>
+        </div>
       </div>
     </section>
   );
@@ -623,6 +638,27 @@ function Footer() {
           © {new Date().getFullYear()} mamyai.pl · Zuzanna Mazurek
         </p>
       </div>
+      <div className="mx-auto max-w-7xl px-5 pb-6 text-xs text-brand-black/60 sm:px-8">
+        Photo by{" "}
+        <a
+          href="https://unsplash.com/@ergonofis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          className="underline underline-offset-2 hover:text-brand-black"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ergonofis
+        </a>{" "}
+        on{" "}
+        <a
+          href="https://unsplash.com/photos/a-woman-sitting-at-a-table-with-a-child-using-a-laptop-Yt-xvKkXtCc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          className="underline underline-offset-2 hover:text-brand-black"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </div>
     </footer>
+
   );
 }
