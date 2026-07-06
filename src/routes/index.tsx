@@ -3,6 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
+import logo from "@/assets/mamy-logo.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,10 +60,10 @@ function Nav() {
     <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
       <a
         href="/"
-        className="flex items-center gap-2 text-lg font-black tracking-tight"
+        className="flex items-center gap-2"
+        aria-label="mamyai.pl — strona główna"
       >
-        <span className="inline-block h-3 w-3 rounded-full bg-brand-orange" />
-        mamyai.pl
+        <img src={logo.url} alt="mamyai.pl" className="h-8 w-auto sm:h-9" />
       </a>
       <a
         href="#dolacz"
@@ -83,7 +84,7 @@ function Hero() {
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-brand-black bg-brand-lilac px-4 py-1.5 text-xs font-bold uppercase tracking-wider sm:text-sm">
             <span className="inline-block h-2 w-2 rounded-full bg-brand-orange" />
-            Mamy, które budują
+            Mamy, które budują biznes z AI
           </div>
 
           <h1 className="max-w-4xl text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
@@ -147,7 +148,7 @@ function Mission() {
           Misja
         </div>
         <p className="max-w-4xl text-3xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-          Każda mama z pomysłem zasługuje na narzędzia, żeby go wdrożyć.
+          Każda mama z pomysłem na biznes zasługuje na narzędzia, żeby go wdrożyć.
         </p>
       </div>
     </section>
@@ -161,13 +162,13 @@ function Pillars() {
     {
       tag: "0 → 1",
       title: "Od pomysłu do produktu",
-      body: "Od pomysłu do działającego produktu — razem, we własnym tempie.",
+      body: "Od pomysłu do działającego produktu — razem, ale we własnym tempie.",
       bg: "bg-brand-cream",
     },
     {
       tag: "AI-first",
-      title: "Kod razem z AI",
-      body: "Piszesz kod razem z AI — nawet jeśli nigdy wcześniej nie miałaś styku z technologią.",
+      title: "Bez zespołu IT",
+      body: "Nie umiesz programować? AI wyrównuje szanse. Zaczynasz dziś, bez doświadczenia.",
       bg: "bg-brand-lilac",
     },
     {
@@ -630,9 +631,8 @@ function Footer() {
   return (
     <footer className="border-t-2 border-brand-black bg-brand-cream">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <div className="flex items-center gap-2 font-black">
-          <span className="inline-block h-3 w-3 rounded-full bg-brand-orange" />
-          mamyai.pl
+        <div className="flex items-center">
+          <img src={logo.url} alt="mamyai.pl" className="h-7 w-auto" />
         </div>
         <p className="text-brand-black/70">
           © {new Date().getFullYear()} mamyai.pl · Zuzanna Mazurek
