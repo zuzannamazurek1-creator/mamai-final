@@ -162,13 +162,13 @@ function Pillars() {
     {
       tag: "0 → 1",
       title: "Od pomysłu do produktu",
-      body: "Od pomysłu do działającego produktu — razem, we własnym tempie.",
+      body: "Od pomysłu do działającego produktu — razem, ale we własnym tempie.",
       bg: "bg-brand-cream",
     },
     {
       tag: "AI-first",
-      title: "Kod razem z AI",
-      body: "Piszesz kod razem z AI — nawet jeśli nigdy wcześniej nie miałaś styku z technologią.",
+      title: "Bez zespołu IT",
+      body: "Nie umiesz programować? AI wyrównuje szanse. Zaczynasz dziś, bez doświadczenia.",
       bg: "bg-brand-lilac",
     },
     {
