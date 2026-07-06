@@ -217,7 +217,7 @@ function Offer() {
     },
     {
       title: "Building in public",
-      body: "Pokazujemy jak budujemy mamyai.pl — tymi samymi narzędziami AI, które polecamy.",
+      body: "Zobacz jak inne członkinie budują swoje biznesy na żywo. Poznaj narzędzia niewymagające kodowania w praktyce.",
     },
     {
       title: "Meetupy w Warszawie",
