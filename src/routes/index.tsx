@@ -60,10 +60,10 @@ function Nav() {
     <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
       <a
         href="/"
-        className="flex items-center gap-2 text-lg font-black tracking-tight"
+        className="flex items-center gap-2"
+        aria-label="mamyai.pl — strona główna"
       >
-        <span className="inline-block h-3 w-3 rounded-full bg-brand-orange" />
-        mamyai.pl
+        <img src={logo.url} alt="mamyai.pl" className="h-8 w-auto sm:h-9" />
       </a>
       <a
         href="#dolacz"
