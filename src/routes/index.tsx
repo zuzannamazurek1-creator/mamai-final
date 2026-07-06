@@ -3,7 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
-import logo from "@/assets/mamy-logo.svg.asset.json";
+const logo = { url: "/logo.svg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -217,7 +217,7 @@ function Offer() {
     },
     {
       title: "Building in public",
-      body: "Pokazujemy jak budujemy mamyai.pl — tymi samymi narzędziami AI, które polecamy.",
+      body: "Zobacz jak inne członkinie budują swoje biznesy na żywo. Poznaj narzędzia niewymagające kodowania w praktyce.",
     },
     {
       title: "Meetupy w Warszawie",
