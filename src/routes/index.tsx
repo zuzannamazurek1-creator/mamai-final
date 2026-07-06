@@ -3,7 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
-import logo from "@/assets/mamy-logo.svg.asset.json";
+const logo = { url: "/logo.svg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
