@@ -84,7 +84,7 @@ function Hero() {
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-brand-black bg-brand-lilac px-4 py-1.5 text-xs font-bold uppercase tracking-wider sm:text-sm">
             <span className="inline-block h-2 w-2 rounded-full bg-brand-orange" />
-            Mamy, które budują
+            Mamy, które budują biznes z AI
           </div>
 
           <h1 className="max-w-4xl text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
