@@ -148,7 +148,7 @@ function Mission() {
           Misja
         </div>
         <p className="max-w-4xl text-3xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-          Każda mama z pomysłem zasługuje na narzędzia, żeby go wdrożyć.
+          Każda mama z pomysłem na biznes zasługuje na narzędzia, żeby go wdrożyć.
         </p>
       </div>
     </section>
