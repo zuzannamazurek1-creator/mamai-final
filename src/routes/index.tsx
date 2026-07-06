@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
+import heroImage from "@/assets/hero-mama.avif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
