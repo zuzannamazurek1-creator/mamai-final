@@ -63,7 +63,7 @@ function Nav() {
         className="flex items-center gap-2"
         aria-label="mamyai.pl — strona główna"
       >
-        <img src={logo.url} alt="mamyai.pl" className="h-8 w-auto sm:h-9" />
+        <img src={logo.url} alt="mamyai.pl" className="h-10 w-auto sm:h-12 md:h-14" />
       </a>
       <a
         href="#dolacz"
