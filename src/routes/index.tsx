@@ -3,6 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
+import zuzannaImage from "@/assets/zuzanna.png.asset.json";
 const logo = { url: "/mamyai-logo-v2.svg" };
 
 export const Route = createFileRoute("/")({
@@ -312,7 +313,7 @@ function FoundersQuote() {
               </div>
             ) : (
               <img
-                src="/zuzanna.jpg"
+                src={zuzannaImage.url}
                 alt="Zuzanna Mazurek, twórczyni mamyai.pl"
                 onError={() => setImgFailed(true)}
                 className="h-32 w-32 rounded-full border-2 border-brand-black object-cover sm:h-40 sm:w-40"
