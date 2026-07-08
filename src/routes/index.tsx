@@ -3,7 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
-const logo = { url: "/mamyai-logo-cropped-20260707.svg" };
+const logo = { url: "/mamyai-logo-v2.svg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,7 +63,7 @@ function Nav() {
         className="flex items-center gap-2"
         aria-label="mamyai.pl — strona główna"
       >
-        <img src={logo.url} alt="mamyai.pl" className="h-60 w-auto" />
+        <img src={logo.url} alt="mamyai.pl" className="h-10 w-auto" />
       </a>
       <a
         href="#dolacz"
