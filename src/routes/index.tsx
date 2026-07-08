@@ -63,7 +63,7 @@ function Nav() {
         className="flex items-center gap-2"
         aria-label="mamyai.pl — strona główna"
       >
-        <img src={logo.url} alt="mamyai.pl" className="h-10 w-auto" />
+        <img src={logo.url} alt="mamyai.pl" className="h-20 w-auto" />
       </a>
       <a
         href="#dolacz"
@@ -274,7 +274,7 @@ function ForWhom() {
             Dla kogo
           </div>
           <h2 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Poznasz się?
+            Dołącz do nas, jeśli...
           </h2>
         </div>
         <ul className="space-y-5">
@@ -403,8 +403,7 @@ function SignupSection() {
 function SignupForm() {
   const subscribeFn = useServerFn(subscribe);
   const [email, setEmail] = useState("");
-  const [gdprContact, setGdprContact] = useState(false);
-  const [gdprNewsletter, setGdprNewsletter] = useState(false);
+  const [gdpr, setGdpr] = useState(false);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
   const [fieldError, setFieldError] = useState<{
     email?: string;
@@ -418,7 +417,7 @@ function SignupForm() {
     const errs: { email?: string; gdpr?: string } = {};
     if (!email.trim()) errs.email = "Wpisz swój adres e-mail";
     else if (!emailValid(email)) errs.email = "Nieprawidłowy adres e-mail";
-    if (!gdprContact) errs.gdpr = "Zgoda jest wymagana, żeby dołączyć";
+    if (!gdpr) errs.gdpr = "Zgoda jest wymagana, żeby dołączyć";
     setFieldError(errs);
     if (Object.keys(errs).length > 0) return;
 
@@ -428,7 +427,7 @@ function SignupForm() {
         data: {
           email: email.trim().toLowerCase(),
           gdpr_contact: true as const,
-          gdpr_newsletter: gdprNewsletter,
+          gdpr_newsletter: true,
         },
       });
       if (result.ok) {
@@ -513,10 +512,10 @@ function SignupForm() {
 
       <div className="mt-6 space-y-4">
         <Checkbox
-          id="gdpr-contact"
-          checked={gdprContact}
+          id="gdpr"
+          checked={gdpr}
           onChange={(v) => {
-            setGdprContact(v);
+            setGdpr(v);
             if (fieldError.gdpr)
               setFieldError((f) => ({ ...f, gdpr: undefined }));
           }}
@@ -525,20 +524,12 @@ function SignupForm() {
         >
           <span className="font-bold">Wymagane.</span> Wyrażam zgodę na
           przetwarzanie mojego adresu e-mail przez mamyai.pl w celu kontaktu
-          dotyczącego społeczności.
+          dotyczącego społeczności oraz otrzymywania newslettera z
+          informacjami o narzędziach AI, materiałach i wydarzeniach.
         </Checkbox>
         {gdprError && (
           <p className="text-sm font-bold text-brand-orange">{gdprError}</p>
         )}
-
-        <Checkbox
-          id="gdpr-newsletter"
-          checked={gdprNewsletter}
-          onChange={setGdprNewsletter}
-        >
-          Chcę otrzymywać newsletter mamyai.pl z informacjami o narzędziach
-          AI, materiałach i wydarzeniach.
-        </Checkbox>
       </div>
 
       <p className="mt-6 text-xs leading-relaxed text-brand-black/70">
