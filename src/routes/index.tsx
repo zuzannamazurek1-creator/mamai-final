@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
 import heroImage from "@/assets/hero-mama.avif.asset.json";
 import zuzannaImage from "@/assets/zuzanna.png.asset.json";
-const logo = { url: "/mamyai-logo-v2.svg" };
+import logo from "@/assets/mamai-logo.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
