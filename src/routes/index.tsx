@@ -420,7 +420,10 @@ function SignupForm() {
     else if (!emailValid(email)) errs.email = "Nieprawidłowy adres e-mail";
     if (!gdpr) errs.gdpr = "Zgoda jest wymagana, żeby dołączyć";
     setFieldError(errs);
-    if (Object.keys(errs).length > 0) return;
+    if (Object.keys(errs).length > 0) {
+      setStatus({ kind: "idle" });
+      return;
+    }
 
     setStatus({ kind: "submitting" });
     try {
@@ -519,6 +522,7 @@ function SignupForm() {
             setGdpr(v);
             if (fieldError.gdpr)
               setFieldError((f) => ({ ...f, gdpr: undefined }));
+            if (status.kind === "error") setStatus({ kind: "idle" });
           }}
           required
           error={!!gdprError}
