@@ -420,7 +420,10 @@ function SignupForm() {
     else if (!emailValid(email)) errs.email = "Nieprawidłowy adres e-mail";
     if (!gdpr) errs.gdpr = "Zgoda jest wymagana, żeby dołączyć";
     setFieldError(errs);
-    if (Object.keys(errs).length > 0) return;
+    if (Object.keys(errs).length > 0) {
+      setStatus({ kind: "idle" });
+      return;
+    }
 
     setStatus({ kind: "submitting" });
     try {
