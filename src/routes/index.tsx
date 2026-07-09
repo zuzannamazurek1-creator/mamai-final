@@ -654,7 +654,11 @@ function Footer() {
           Unsplash
         </a>
       </div>
+      <div
+        className="commonninja_component pid-05f81463-d2c3-4ef9-9cae-3ff815f54983"
+      />
     </footer>
+
 
   );
 }
