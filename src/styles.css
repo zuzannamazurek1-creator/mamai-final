@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * mamyai.pl — design system
+ * mamai.pl — design system
  * Brand colors only: Orange, Lavender, Lilac, Cream, Black.
  * Font: Inter (loaded via <link> in __root.tsx head).
  */
