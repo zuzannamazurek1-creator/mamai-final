@@ -522,6 +522,7 @@ function SignupForm() {
             setGdpr(v);
             if (fieldError.gdpr)
               setFieldError((f) => ({ ...f, gdpr: undefined }));
+            if (status.kind === "error") setStatus({ kind: "idle" });
           }}
           required
           error={!!gdprError}
