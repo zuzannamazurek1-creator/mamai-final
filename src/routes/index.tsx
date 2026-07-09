@@ -9,7 +9,7 @@ import logo from "@/assets/mamai-logo.svg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "mamyai.pl — Mamy, które budują" },
+      { title: "mamai.pl — Mamy, które budują" },
       {
         name: "description",
         content:
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "mamyai.pl — Mamy, które budują",
+        content: "mamai.pl — Mamy, które budują",
       },
       {
         property: "og:description",
@@ -62,9 +62,9 @@ function Nav() {
       <a
         href="/"
         className="flex items-center gap-2"
-        aria-label="mamyai.pl — strona główna"
+        aria-label="mamai.pl — strona główna"
       >
-        <img src={logo.url} alt="mamyai.pl" className="h-20 w-auto" />
+        <img src={logo.url} alt="mamai.pl" className="h-20 w-auto" />
       </a>
       <a
         href="#dolacz"
@@ -97,7 +97,7 @@ function Hero() {
                 className="absolute inset-x-0 bottom-1 -z-0 h-3 bg-brand-orange sm:bottom-2 sm:h-4 md:h-5"
               />
             </span>{" "}
-            nigdzie nie&nbsp;nadejdzie.
+            nigdy nie&nbsp;nadejdzie.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg font-normal leading-relaxed text-brand-black/80 sm:text-xl">
@@ -314,7 +314,7 @@ function FoundersQuote() {
             ) : (
               <img
                 src={zuzannaImage.url}
-                alt="Zuzanna Mazurek, twórczyni mamyai.pl"
+                alt="Zuzanna Mazurek, twórczyni mamai.pl"
                 onError={() => setImgFailed(true)}
                 className="h-32 w-32 rounded-full border-2 border-brand-black object-cover sm:h-40 sm:w-40"
               />
@@ -326,7 +326,7 @@ function FoundersQuote() {
               wdrożenia. Na drugim — AI zmieniło reguły gry."
             </p>
             <p className="mt-6 text-sm font-bold uppercase tracking-widest">
-              Zuzanna Mazurek · twórczyni mamyai.pl
+              Zuzanna Mazurek · twórczyni mamai.pl
             </p>
           </div>
         </div>
@@ -524,7 +524,7 @@ function SignupForm() {
           error={!!gdprError}
         >
           <span className="font-bold">Wymagane.</span> Wyrażam zgodę na
-          przetwarzanie mojego adresu e-mail przez mamyai.pl w celu kontaktu
+          przetwarzanie mojego adresu e-mail przez mamai.pl w celu kontaktu
           dotyczącego społeczności oraz otrzymywania newslettera z
           informacjami o narzędziach AI, materiałach i wydarzeniach.
         </Checkbox>
@@ -624,10 +624,10 @@ function Footer() {
     <footer className="border-t-2 border-brand-black bg-brand-cream">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div className="flex items-center">
-          <img src={logo.url} alt="mamyai.pl" className="h-7 w-auto" />
+          <img src={logo.url} alt="mamai.pl" className="h-7 w-auto" />
         </div>
         <p className="text-brand-black/70">
-          © {new Date().getFullYear()} mamyai.pl · Zuzanna Mazurek
+          © {new Date().getFullYear()} mamai.pl · Zuzanna Mazurek
         </p>
       </div>
       <div className="mx-auto max-w-7xl px-5 pb-6 text-xs text-brand-black/60 sm:px-8">
