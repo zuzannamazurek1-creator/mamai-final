@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-const SITE_TITLE = "mamyai.pl — Mamy, które budują";
+const SITE_TITLE = "mamai.pl — Mamy, które budują";
 const SITE_DESCRIPTION =
   "Polska społeczność dla mam, które budują własne projekty i biznesy z AI. Dołącz do mam-builderek, które nie czekają na „odpowiedni moment”.";
 
