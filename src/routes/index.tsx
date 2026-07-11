@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { subscribe, type SubscribeResult } from "@/lib/subscribe.functions";
@@ -539,12 +539,12 @@ function SignupForm() {
 
       <p className="mt-6 text-xs leading-relaxed text-brand-black/70">
         Administratorem danych jest Zuzanna Mazurek. Pełna{" "}
-        <a
-          href="#polityka-prywatnosci"
+        <Link
+          to="/polityka-prywatnosci"
           className="font-bold underline underline-offset-2"
         >
           Polityka prywatności
-        </a>
+        </Link>
         .
       </p>
 
