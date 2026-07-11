@@ -118,7 +118,7 @@ function PrivacyPage() {
               5. Komu przekazujemy dane?
             </h2>
             <p className="mt-4 text-brand-black/80">
-              Twoje dane przechowujemy w bezpiecznej bazie danych Lovable Cloud.
+              Twoje dane przechowujemy w bezpiecznej bazie danych Supabase.
               Nie sprzedajemy, nie wypożyczamy i nie udostępniamy Twoich danych
               osobom trzecim do celów marketingowych.
             </p>
