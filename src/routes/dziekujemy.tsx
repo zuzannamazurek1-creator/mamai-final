@@ -77,3 +77,22 @@ function HeartIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+function PartyIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+        clipRule="evenodd"
+      />
+      <path d="M17.25 8.25a.75.75 0 10-1.5 0 .75.75 0 001.5 0zM5.055 6.805a.75.75 0 01.99-.38l2.5 1a.75.75 0 11-.55 1.4l-2.5-1a.75.75 0 01-.38-.99zm13.89 0a.75.75 0 01-.38.99l-2.5 1a.75.75 0 11-.55-1.4l2.5-1a.75.75 0 01.99.38z" />
+    </svg>
+  );
+}
