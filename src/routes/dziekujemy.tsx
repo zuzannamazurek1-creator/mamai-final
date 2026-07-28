@@ -40,7 +40,10 @@ function ThankYouPage() {
           </div>
 
           <h1 className="mt-8 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            Dziękujemy, że jesteś z nami! 🎉
+            Dziękujemy, że jesteś z nami!
+            <span className="ml-2 inline-block align-middle" aria-hidden="true">
+              <PartyIcon className="h-9 w-9 text-brand-orange sm:h-11 sm:w-11" />
+            </span>
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-brand-black/80 sm:text-xl">
