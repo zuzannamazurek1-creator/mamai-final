@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      members_directory: {
+        Row: {
+          avatar_url: string
+          bio: string
+          business_name: string | null
+          business_url: string | null
+          consent_gdpr: boolean
+          created_at: string
+          full_name: string
+          id: string
+          status: string
+        }
+        Insert: {
+          avatar_url: string
+          bio: string
+          business_name?: string | null
+          business_url?: string | null
+          consent_gdpr: boolean
+          created_at?: string
+          full_name: string
+          id?: string
+          status?: string
+        }
+        Update: {
+          avatar_url?: string
+          bio?: string
+          business_name?: string | null
+          business_url?: string | null
+          consent_gdpr?: boolean
+          created_at?: string
+          full_name?: string
+          id?: string
+          status?: string
+        }
+        Relationships: []
+      }
       subscribers: {
         Row: {
           created_at: string
@@ -21,6 +57,7 @@ export type Database = {
           gdpr_contact: boolean
           gdpr_newsletter: boolean
           id: string
+          Potrzeby: string | null
         }
         Insert: {
           created_at?: string
@@ -28,6 +65,7 @@ export type Database = {
           gdpr_contact?: boolean
           gdpr_newsletter?: boolean
           id?: string
+          Potrzeby?: string | null
         }
         Update: {
           created_at?: string
@@ -35,6 +73,7 @@ export type Database = {
           gdpr_contact?: boolean
           gdpr_newsletter?: boolean
           id?: string
+          Potrzeby?: string | null
         }
         Relationships: []
       }

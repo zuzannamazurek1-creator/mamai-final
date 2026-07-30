@@ -9,10 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhatsappRouteImport } from './routes/whatsapp'
 import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
 import { Route as DziekujemyRouteImport } from './routes/dziekujemy'
+import { Route as DolaczRouteImport } from './routes/dolacz'
+import { Route as CzlonkinieRouteImport } from './routes/czlonkinie'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WhatsappRoute = WhatsappRouteImport.update({
+  id: '/whatsapp',
+  path: '/whatsapp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
   id: '/polityka-prywatnosci',
   path: '/polityka-prywatnosci',
@@ -23,6 +32,21 @@ const DziekujemyRoute = DziekujemyRouteImport.update({
   path: '/dziekujemy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DolaczRoute = DolaczRouteImport.update({
+  id: '/dolacz',
+  path: '/dolacz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CzlonkinieRoute = CzlonkinieRouteImport.update({
+  id: '/czlonkinie',
+  path: '/czlonkinie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,36 +55,81 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/czlonkinie': typeof CzlonkinieRoute
+  '/dolacz': typeof DolaczRoute
   '/dziekujemy': typeof DziekujemyRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/czlonkinie': typeof CzlonkinieRoute
+  '/dolacz': typeof DolaczRoute
   '/dziekujemy': typeof DziekujemyRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/czlonkinie': typeof CzlonkinieRoute
+  '/dolacz': typeof DolaczRoute
   '/dziekujemy': typeof DziekujemyRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dziekujemy' | '/polityka-prywatnosci'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/czlonkinie'
+    | '/dolacz'
+    | '/dziekujemy'
+    | '/polityka-prywatnosci'
+    | '/whatsapp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dziekujemy' | '/polityka-prywatnosci'
-  id: '__root__' | '/' | '/dziekujemy' | '/polityka-prywatnosci'
+  to:
+    | '/'
+    | '/admin'
+    | '/czlonkinie'
+    | '/dolacz'
+    | '/dziekujemy'
+    | '/polityka-prywatnosci'
+    | '/whatsapp'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/czlonkinie'
+    | '/dolacz'
+    | '/dziekujemy'
+    | '/polityka-prywatnosci'
+    | '/whatsapp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
+  CzlonkinieRoute: typeof CzlonkinieRoute
+  DolaczRoute: typeof DolaczRoute
   DziekujemyRoute: typeof DziekujemyRoute
   PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
+  WhatsappRoute: typeof WhatsappRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/whatsapp': {
+      id: '/whatsapp'
+      path: '/whatsapp'
+      fullPath: '/whatsapp'
+      preLoaderRoute: typeof WhatsappRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/polityka-prywatnosci': {
       id: '/polityka-prywatnosci'
       path: '/polityka-prywatnosci'
@@ -75,6 +144,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DziekujemyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dolacz': {
+      id: '/dolacz'
+      path: '/dolacz'
+      fullPath: '/dolacz'
+      preLoaderRoute: typeof DolaczRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/czlonkinie': {
+      id: '/czlonkinie'
+      path: '/czlonkinie'
+      fullPath: '/czlonkinie'
+      preLoaderRoute: typeof CzlonkinieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,8 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
+  CzlonkinieRoute: CzlonkinieRoute,
+  DolaczRoute: DolaczRoute,
   DziekujemyRoute: DziekujemyRoute,
   PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
+  WhatsappRoute: WhatsappRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
