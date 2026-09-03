@@ -11,9 +11,9 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-const SITE_TITLE = "mamai.pl — Mamy, które budują";
+const SITE_TITLE = "mamai.pl — Mama, która nie boi się AI";
 const SITE_DESCRIPTION =
-  "Polska społeczność dla mam, które budują własne projekty i biznesy z AI. Dołącz do mam-builderek, które nie czekają na „odpowiedni moment”.";
+  "Proste triki, pierwsze kroki i gotowe prompty AI dla mam, których dniem rządzą dzieci. Zapisz się do newslettera i odbierz bazę promptów za darmo.";
 
 function NotFoundComponent() {
   return (
@@ -92,12 +92,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: SITE_TITLE },
       { name: "twitter:description", content: SITE_DESCRIPTION },
-      { title: "mamai.pl — Mamy, które budują" },
-      { property: "og:title", content: "mamai.pl — Mamy, które budują" },
-      { name: "twitter:title", content: "mamai.pl — Mamy, które budują" },
-      { name: "description", content: "Społeczność polskich mam, które budują własne projekty z AI. Dołącz do mam-builderek — bezpłatnie, bez zobowiązań." },
-      { property: "og:description", content: "Społeczność polskich mam, które budują własne projekty z AI. Dołącz do mam-builderek — bezpłatnie, bez zobowiązań." },
-      { name: "twitter:description", content: "Społeczność polskich mam, które budują własne projekty z AI. Dołącz do mam-builderek — bezpłatnie, bez zobowiązań." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4873c1e0-5c30-4eff-9636-a5e4e230b3ac/id-preview-00fcc93a--7e47d324-00bb-462a-b79a-8159ade7138b.lovable.app-1785239173797.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4873c1e0-5c30-4eff-9636-a5e4e230b3ac/id-preview-00fcc93a--7e47d324-00bb-462a-b79a-8159ade7138b.lovable.app-1785239173797.png" },
     ],

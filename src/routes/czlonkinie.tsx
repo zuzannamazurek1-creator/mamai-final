@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
-import logo from "@/assets/mamai-logo.svg.asset.json";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
 
 type Member = Tables<"members_directory">;
 
@@ -49,21 +50,7 @@ function MembersPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-brand-cream text-brand-black">
-      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
-        <a
-          href="/"
-          className="flex items-center gap-2"
-          aria-label="mamai.pl — strona główna"
-        >
-          <img src={logo.url} alt="mamai.pl" className="h-20 w-auto" />
-        </a>
-        <a
-          href="/"
-          className="rounded-full bg-brand-black px-4 py-2 text-sm font-bold text-brand-cream transition-transform hover:scale-[1.03] sm:px-5"
-        >
-          Strona główna
-        </a>
-      </nav>
+      <Nav variant="members" />
 
       <main className="mx-auto w-full max-w-7xl flex-1 px-5 pb-20 pt-8 sm:px-8 sm:pt-12">
         <div className="max-w-3xl">
@@ -102,11 +89,7 @@ function MembersPage() {
         </div>
       </main>
 
-      <footer className="border-t-2 border-brand-black/10 bg-brand-cream">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-8 sm:px-8">
-          <img src={logo.url} alt="mamai.pl" className="h-7 w-auto" />
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
