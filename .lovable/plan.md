@@ -13,7 +13,7 @@ Strona główna ma mówić do **wszystkich mam** i zbierać zapisy do newsletter
 /polityka-prywatnosci, /dziekujemy, /dolacz, /whatsapp, /admin  bez zmian
 ```
 
-Nawigacja (wspólna dla `/` i `/biznes`): logo → `/`, zakładka **Dla mam w biznesie** → `/biznes`, przycisk **Odbierz prompty** → kotwica do formularza na stronie głównej.
+Nawigacja (wspólna dla `/` i `/biznes`): logo → `/`, zakładka **Dla mam w biznesie** → `/biznes`, zakładka **Poznaj członkinie** → `/czlonkinie`, przycisk **Odbierz prompty** → kotwica do formularza na stronie głównej.
 
 ## Treści nowej strony głównej (propozycja do Twojej akceptacji)
 
