@@ -8,7 +8,7 @@ Strona główna ma mówić do **wszystkich mam** i zbierać zapisy do newsletter
 
 ```text
 /                 nowa strona główna (AI dla mam + newsletter + lead magnet)
-/biznes           obecny landing dla mam-builderek (1:1, formularz zostaje)
+/biznes           obecny landing dla mam-builderek (1:1, formularz zostaje). Na nowej stronie głównej i w nawigacji przycisk „Poznaj członkinie” → /czlonkinie
 /czlonkinie       bez zmian
 /polityka-prywatnosci, /dziekujemy, /dolacz, /whatsapp, /admin  bez zmian
 ```
