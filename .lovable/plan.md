@@ -21,7 +21,7 @@ Ton: bezpośredni, ciepły, bez żargonu. Te same kolory, font i styl kart/przyc
 
 **1. Hero**
 - Badge: „Mama, która nie boi się AI”
-- H1: „AI to nie kolejny kurs. To 10 minut dziennie, które oddają Ci czas.”
+- H1: „Zainwestuj 10 minut dziennie i zyskaj czas na to, co jest naprawdę ważne.”
 - Podtytuł: „Proste triki, pierwsze kroki i gotowe prompty dla mam, których dniem rządzą dzieci. Bez dwugodzinnych live'ów i skomplikowanego setupu.”
 - CTA: „Odbierz bazę promptów dla mam →” (kotwica do formularza) + link „Prowadzisz biznes?” → `/biznes`
 - Zdjęcie: obecne hero (mama z dzieckiem przy laptopie) – do ewentualnej podmiany później.
