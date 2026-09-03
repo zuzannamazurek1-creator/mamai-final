@@ -11,7 +11,12 @@ const subscribeSchema = z.object({
   gdpr_contact: z.literal(true, {
     errorMap: () => ({ message: "Zgoda GDPR jest wymagana" }),
   }),
-  gdpr_newsletter: z.boolean(),
+  gdpr_newsletter: z.literal(true, {
+    errorMap: () => ({ message: "Zgoda GDPR jest wymagana" }),
+  }),
+  source: z.enum(["newsletter", "builderki"], {
+    errorMap: () => ({ message: "Nieprawidłowe źródło zapisu" }),
+  }),
 });
 
 export type SubscribeResult =
@@ -29,10 +34,11 @@ export const subscribe = createServerFn({ method: "POST" })
       email: data.email,
       gdpr_contact: data.gdpr_contact,
       gdpr_newsletter: data.gdpr_newsletter,
+      source: data.source,
     });
 
     if (error) {
-      // Postgres unique_violation
+      // Postgres unique_violation — email already exists for this source
       if ((error as { code?: string }).code === "23505") {
         return {
           ok: false,
