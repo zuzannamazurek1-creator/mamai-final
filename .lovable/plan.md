@@ -38,7 +38,7 @@ Ton: bezpośredni, ciepły, bez żargonu. Te same kolory, font i styl kart/przyc
 **4. „Co możesz zautomatyzować już w tym tygodniu”** (ciemna sekcja, numerowana lista jak obecna „Co dostajesz”)
 - 01 Jadłospis na tydzień z Twoich ulubionych przepisów + gotowa lista zakupów
 - 02 Wspólne zadania domowe — jedna lista dla wszystkich domowników
-- 03 Baza informacji o domu — „czy mamy jeszcze makaron?” i „gdzie jest zimowa kurtka?” przestają być Twoim pytaniem
+- 03 Baza informacji o domu — „czy mamy jeszcze makaron?” i „gdzie jest zimowa kurtka?” przestają być pytaniami, na które tylko Ty znasz odpowiedź
 - 04 Własne mini-aplikacje bez kodowania — gdy gotowe narzędzia nie wystarczają
 - Podpis pod listą: narzędzia — Claude, Gemini, ChatGPT, Notion.
 
